@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📖 Study Material</title>
+  <link rel="stylesheet" href="../css/study.css" />
+  <link rel="stylesheet" href="../CSS/feedback.css" />
+  <link rel="stylesheet" href="../CSS/buttons.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h2>📚 Subjects</h2>
+    <div class="grid">
+      <a href="quran.html" class="subject">📘 Qur’an</a>
+      <a href="hadees.html" class="subject">📙 Hadees</a>
+      <a href="fiqh.html" class="subject">📗 Fiqh</a>
+      <a href="aqeedah.html" class="subject">📕 Aqeedah</a>
+      <a href="history.html" class="subject">📒 History</a>
+      <a href="arabic.html" class="subject">📓 Arabic</a>
+      <a href="english.html" class="subject">📔 English</a>
+      <a href="urdu.html" class="subject">📚 Urdu</a>
+      <a href="ethics.html" class="subject">📖 Ethics</a>
+      <a href="malayalam.html" class="subject">📗 Malayalam</a>
+    </div>
+    
+    <section class="feedback-section">
+  <h3>📩 Send Us Feedback</h3>
+  <form id="feedbackForm">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <textarea name="message" placeholder="Write your feedback..." required></textarea>
+    <button type="submit">Submit</button>
+    <p id="feedbackStatus"></p>
+  </form>
+</section>
+
+<br>
+   
+  <div class="back-buttons">
+      <a href="../HTML/dashboard.html" class="back-btn">⬅️ Back to Dashboard</a>
+    </div>
+  <script src="../JS/feedlink.js"></script>
+</body>
+</html>

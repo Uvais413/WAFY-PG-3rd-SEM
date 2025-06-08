@@ -1,0 +1,61 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <button id="logoutBtn" class="logout-btn">Logout</button>
+  <link rel="stylesheet" href="../CSS/dashboard.css" />
+  <link rel="stylesheet" href="../CSS/feedback.css" />
+  <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>📚 Welcome, <span id="user-name"></span>!</h2>
+     <div>
+        <div class="dashboard-content">
+        <div class="profile-card">
+    <img src="" alt="Profile Photo" class="profile-photo" id="profilePhoto" />
+    <h3 id="studentName"></h3>
+    <p>Username: <span id="usernameDisplay"></span></p>
+    <p>Time spent: <span id="timeSpent">00:00:00</span></p>
+    </div>
+     </div>
+     </div>
+
+      
+     <br> <br>
+    <div class="grid">
+      <a href="https://example.com/syllabus.pdf" target="_blank" class="card">📘 Syllabus</a>
+      <a href="https://example.com/yearplan.pdf" target="_blank" class="card">📆 Year Plan</a>
+      <a href="study.html" class="card">📖 Study Material</a>
+      <a href="cic.html" class="card">📢 CIC Notification</a>
+      <a href="class.html" class="card">🗓️ Class Notification</a>
+      
+    </div>
+
+    <section class="feedback-section">
+  <h3>📩 Send Us Feedback</h3>
+  <form id="feedbackForm">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <textarea name="message" placeholder="Write your feedback..." required></textarea>
+    <button type="submit">Submit</button>
+    <p id="feedbackStatus"></p>
+  </form>
+</section>
+<br> <br>
+
+    <div class="footer">
+      <p id="date-time"></p>
+    </div>
+  </div>
+
+  <script src="../JS/feedlink.js"></script>
+  <script src="../JS/dashboard.js"></script>
+  <script src="../JS/script.js"></script>
+</body>
+</html>
+
+
+
