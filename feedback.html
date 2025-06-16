@@ -57,40 +57,33 @@
   </form>
 
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyTo4G2HVzcBWSBAVhvcsfDqP-SysmzBLEkHeKyMe7ARwBUpGW1sLhnamyFTD2IjEV4Uw/exec'; // Replace this with your Web App URL
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyxn9IwDJFWlh1CaVcZTz3bjrBy-mHr2ZBQiLcnpzh8c-UqQA8E5ei8oeoPyhf_F8fHuA/exec';
+  const form = document.getElementById('feedback-form');
+  const msgDiv = document.getElementById('msg');
 
-    const form = document.getElementById('feedback-form');
-    const msgDiv = document.getElementById('msg');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      
-      const data = {
-        name: form.name.value,
-        message: form.message.value
-      };
+    const formData = new FormData(form);
 
-      fetch(scriptURL, {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-      .then(response => response.json())
-      .then(data => {
-        if(data.result === 'success') {
-          msgDiv.textContent = 'Thanks for your feedback!';
-          form.reset();
-        } else {
-          msgDiv.textContent = 'Error submitting feedback.';
-        }
-      })
-      .catch(err => {
+    fetch(scriptURL, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        msgDiv.textContent = 'Thanks for your feedback!';
+        form.reset();
+      } else {
         msgDiv.textContent = 'Error submitting feedback.';
-        console.error(err);
-      });
+      }
+    })
+    .catch(err => {
+      msgDiv.textContent = 'Error submitting feedback.';
+      console.error(err);
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
