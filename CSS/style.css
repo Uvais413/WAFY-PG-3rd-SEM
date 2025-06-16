@@ -110,8 +110,8 @@ header {
 }
 
 .profile-photo {
-  width: 110px;
-  height: 110px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #00796b;
@@ -166,3 +166,4 @@ header {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
