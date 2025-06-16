@@ -4,7 +4,7 @@ document.getElementById("feedbackForm").addEventListener("submit", function (e) 
     const name = e.target.name.value;
     const message = e.target.message.value;
 
-    fetch("https://script.google.com/macros/s/AKfycbzZYBWdfcf72R7tqKoes4lv2x4rRKkM5EeI16-aWccpXTpeDHSgSOoEJHaQ9RExlfvRkQ/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbyTo4G2HVzcBWSBAVhvcsfDqP-SysmzBLEkHeKyMe7ARwBUpGW1sLhnamyFTD2IjEV4Uw/exec", {
       method: "POST",
       body: new URLSearchParams({ name, message })
     })
