@@ -4,20 +4,69 @@ const students = [
     username: "Demo",
     password: "120",
     name: "Uvais AP",
-    photo: "photos/demo.jpg",
+    photo: "demo.jpg",
   },
   {
     username: "ahmed01",
     password: "ahmedpwd",
     name: "Ahmed Ali",
-    photo: "https://randomuser.me/api/portraits/men/44.jpg",
+    photo: "demo.jpg",
   },
   {
-    username: "fatima02",
-    password: "fatima22",
-    name: "Fatima Zahra",
-    photo: "https://randomuser.me/api/portraits/women/68.jpg",
+    username: "ahmed01",
+    password: "ahmedpwd",
+    name: "Ahmed Ali",
+    photo: "demo.jpg",
   },
+  {
+    username: "ahmed01",
+    password: "ahmedpwd",
+    name: "Ahmed Ali",
+    photo: "demo.jpg",
+  },
+  {
+    username: "ahmed01",
+    password: "ahmedpwd",
+    name: "Ahmed Ali",
+    photo: "demo.jpg",
+  },
+  {
+    username: "ahmed01",
+    password: "ahmedpwd",
+    name: "Ahmed Ali",
+    photo: "demo.jpg",
+  },
+  {
+    username: "ahmed01",
+    password: "ahmedpwd",
+    name: "Ahmed Ali",
+    photo: "demo.jpg",
+  },
+  {
+    username: "ahmed01",
+    password: "ahmedpwd",
+    name: "Ahmed Ali",
+    photo: "demo.jpg",
+  },
+  {
+    username: "ahmed01",
+    password: "ahmedpwd",
+    name: "Ahmed Ali",
+    photo: "demo.jpg",
+  },
+  {
+    username: "ahmed01",
+    password: "ahmedpwd",
+    name: "Ahmed Ali",
+    photo: "demo.jpg",
+  },
+  {
+    username: "ahmed01",
+    password: "ahmedpwd",
+    name: "Ahmed Ali",
+    photo: "demo.jpg",
+  },
+
 ];
 
 // Key for tracking logged-in users in localStorage
