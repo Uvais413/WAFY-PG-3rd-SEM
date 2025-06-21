@@ -16,7 +16,7 @@ const students = [
     username: "Sabesabeeh",
     password: "sabe786",
     name: "Mohammed Sabeeh",
-    photo: "demo.jpg",
+    photo: "sabeeh 2.jpg",
   },
   {
     username: "Swalih",
