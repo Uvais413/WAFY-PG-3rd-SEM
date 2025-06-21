@@ -4,7 +4,7 @@ const students = [
     username: "Demo",
     password: "120",
     name: "Uvais AP",
-    photo: "demo.jpg",
+    photo: "demo passport 2.jpg",
   },
   {
     username: "ahmed01",
