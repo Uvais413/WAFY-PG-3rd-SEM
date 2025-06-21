@@ -41,6 +41,10 @@ body {
 }
 
 /* ...existing code... */
+.sup {
+      font-size: 0.5em;     /* smaller size */
+      vertical-align: super; /* lifts text */
+    }
 
 /* Login Container */
 .login-container {
