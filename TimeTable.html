@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,width:100%, initial-scale=1">
     <title> PG -Class Timetable</title>
     <style>
         * {
@@ -86,6 +86,7 @@
             padding: 20px;
             background: #f8f9fa;
             border-bottom: 1px solid #e9ecef;
+            text-align: center;
         }
 
         .filter-buttons {
@@ -93,6 +94,14 @@
             gap: 8px;
             overflow-x: auto;
             padding-bottom: 5px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scroll-snap-type: mandatory;
+            margin: 0 auto;
+            justify-content: center;
+        }
+        .filter-buttons::-webkit-scrollbar {
+            height: 8px;
         }
 
         .filter-btn {
@@ -106,6 +115,7 @@
             transition: all 0.3s ease;
             white-space: nowrap;
             min-width: 100px;
+            scroll-snap-align: start;
         }
 
         .filter-btn:hover {
@@ -263,48 +273,47 @@
         }
 
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.5rem;
-            }
-            
-            .filter-buttons {
-                justify-content: center;
-            }
-            
-            .filter-btn {
-                padding: 10px 15px;
-                font-size: 0.9rem;
-                min-width: 80px;
-            }
-            
-            .timetable th,
-            .timetable td {
-                padding: 12px 6px;
-                font-size: 0.85rem;
-            }
-            
-            .timetable {
-                min-width: 1100px;
-            }
-        }
+         .header h1 {
+           font-size: 1.2rem;
+    }
+         .filter-buttons {
+            justify-content: flex-start;
+    }
+         .filter-btn {
+         padding: 8px 10px;
+         font-size: 0.8rem;
+         min-width: 60px;
+    }
+         .timetable th,
+         .timetable td {
+         padding: 8px 2px;
+         font-size: 0.75rem;
+    }
+    .timetable {
+        min-width: 600px; /* Reduced for smaller screens */
+    }
+}
 
-        @media (max-width: 480px) {
-            .container {
-                border-radius: 15px;
-                margin: 5px;
-            }
-            
-            .header {
-                padding: 20px 15px;
-            }
-            
-            .timetable th,
-            .timetable td {
-                padding: 10px 4px;
-                font-size: 0.8rem;
-            }
-        }
-    </style>
+    @media (max-width: 480px) {
+    .container {
+        border-radius: 10px;
+        margin: 2px;
+        padding: 2px;
+    }
+    .header {
+        padding: 10px 5px;
+    }
+    .timetable th,
+    .timetable td {
+        padding: 6px 1px;
+        font-size: 0.7rem;
+    }
+    .timetable {
+        min-width: 350px; /* Allow table to fit smaller screens */
+    }
+}
+  
+ </style>
     <link rel="stylesheet" href="buttons.css">
 </head>
 <body>
@@ -338,12 +347,12 @@
                         <th class="time-header">Period 1<br>7:30–8:15</th>
                         <th class="time-header">Period 2<br>8:15–9:00</th>
                         <th class="break-header">Break<br>9:00–9:40</th>
-                        <th class="time-header">Period 3<br>9:40–10:20</th>
-                        <th class="time-header">Period 4<br>10:20–11:00</th>
+                        <th class="time-header">Period 3<br>9:40–10:25</th>
+                        <th class="time-header">Period 4<br>10:25–11:10</th>
                         <th class="break-header">Inter Bell<br>11:10–11:20</th>
-                        <th class="time-header">Period 5<br>11:20–12:10</th>
-                        <th class="time-header">Period 6<br>12:10–12:45</th>
-                        <th class="break-header">Lunch<br>01:15–02:30</th>
+                        <th class="time-header">Period 5<br>11:20–12:05</th>
+                        <th class="time-header">Period 6<br>12:05–12:45</th>
+                        <th class="break-header">Lunch<br>12:45–02:30</th>
                         <th class="time-header">Period 7<br>02:30–3:15</th>
                         <th class="time-header">Period 8<br>03:15–4:00</th>
                     </tr>
@@ -351,87 +360,87 @@
                 <tbody id="timetableBody">
                     <tr data-day="Saturday">
                         <td class="day-cell">Saturday</td>
-                        <td class="subject-cell">Science</td>
-                        <td class="subject-cell">Geography</td>
+                        <td class="subject-cell">MR</td>
+                        <td class="subject-cell">KVK</td>
                         <td class="break-cell">🍞 Break Fast</td>
-                        <td class="subject-cell">Science</td>
-                        <td class="subject-cell">Geography</td>
+                        <td class="subject-cell">UA</td>
+                        <td class="subject-cell">MR</td>
                         <td class="break-cell">🔔 Inter Bell</td>
-                        <td class="subject-cell">Mathematics</td>
-                        <td class="subject-cell">History</td>
+                        <td class="subject-cell">---</td>
+                        <td class="subject-cell">UA</td>
                         <td class="break-cell">🍽️ Lunch Break</td>
-                        <td class="subject-cell">Art & Craft</td>
-                        <td class="subject-cell">Computer Science</td>
+                        <td class="subject-cell">LR</td>
+                        <td class="subject-cell">---</td>
                     </tr>
                     <tr data-day="Sunday">
                         <td class="day-cell">Sunday</td>
-                        <td class="subject-cell">History</td>
-                        <td class="subject-cell">History</td>
+                        <td class="subject-cell">UW</td>
+                        <td class="subject-cell">LR</td>
                         <td class="break-cell">🍞 Break Fast</td>
-                        <td class="subject-cell">Physical Education</td>
-                        <td class="subject-cell">Geography</td>
+                        <td class="subject-cell">KVK</td>
+                        <td class="subject-cell">UA</td>
                         <td class="break-cell">🔔 Inter Bell</td>
-                        <td class="subject-cell">Geography</td>
-                        <td class="subject-cell">Mathematics</td>
+                        <td class="subject-cell">MR</td>
+                        <td class="subject-cell">UA</td>
                         <td class="break-cell">🍽️ Lunch Break</td>
-                        <td class="subject-cell">English</td>
-                        <td class="subject-cell">Art & Craft</td>
+                        <td class="subject-cell">DURASATH</td>
+                        <td class="subject-cell">LR</td>
                     </tr>
                     <tr data-day="Monday">
                         <td class="day-cell">Monday</td>
-                        <td class="subject-cell">Mathematics</td>
-                        <td class="subject-cell">Mathematics</td>
+                        <td class="subject-cell">AV</td>
+                        <td class="subject-cell">UA</td>
                         <td class="break-cell">🍞 Break Fast</td>
-                        <td class="subject-cell">Science</td>
-                        <td class="subject-cell">Physical Education</td>
+                        <td class="subject-cell">UA</td>
+                        <td class="subject-cell">KVK</td>
                         <td class="break-cell">🔔 Inter Bell</td>
-                        <td class="subject-cell">English</td>
-                        <td class="subject-cell">History</td>
+                        <td class="subject-cell">MR</td>
+                        <td class="subject-cell">DIRASATH</td>
                         <td class="break-cell">🍽️ Lunch Break</td>
-                        <td class="subject-cell">Geography</td>
-                        <td class="subject-cell">Computer Science</td>
+                        <td class="subject-cell">MR</td>
+                        <td class="subject-cell">---</td>
                     </tr>
                     <tr data-day="Tuesday">
                         <td class="day-cell">Tuesday</td>
-                        <td class="subject-cell">Mathematics</td>
-                        <td class="subject-cell">Science</td>
+                        <td class="subject-cell">AV</td>
+                        <td class="subject-cell">MR</td>
                         <td class="break-cell">🍞 Break Fast</td>
-                        <td class="subject-cell">Mathematics</td>
-                        <td class="subject-cell">Geography</td>
+                        <td class="subject-cell">KVK</td>
+                        <td class="subject-cell">UA</td>
                         <td class="break-cell">🔔 Inter Bell</td>
-                        <td class="subject-cell">Mathematics</td>
-                        <td class="subject-cell">Art & Craft</td>
+                        <td class="subject-cell">MR</td>
+                        <td class="subject-cell">UW</td>
                         <td class="break-cell">🍽️ Lunch Break</td>
-                        <td class="subject-cell">Computer Science</td>
-                        <td class="subject-cell">English</td>
+                        <td class="subject-cell">UA</td>
+                        <td class="subject-cell">DIRASATH</td>
                     </tr>
                     <tr data-day="Wednesday">
                         <td class="day-cell">Wednesday</td>
-                        <td class="subject-cell">Science</td>
-                        <td class="subject-cell">Geography</td>
+                        <td class="subject-cell">UA</td>
+                        <td class="subject-cell">MR</td>
                         <td class="break-cell">🍞 Break Fast</td>
-                        <td class="subject-cell">Science</td>
-                        <td class="subject-cell">Geography</td>
+                        <td class="subject-cell">UA</td>
+                        <td class="subject-cell">MR</td>
                         <td class="break-cell">🔔 Inter Bell</td>
-                        <td class="subject-cell">Mathematics</td>
-                        <td class="subject-cell">History</td>
+                        <td class="subject-cell">KVK</td>
+                        <td class="subject-cell">---</td>
                         <td class="break-cell">🍽️ Lunch Break</td>
-                        <td class="subject-cell">Art & Craft</td>
-                        <td class="subject-cell">Computer Science</td>
+                        <td class="subject-cell">UW</td>
+                        <td class="subject-cell">DIRASATH</td>
                     </tr>
                     <tr data-day="Thursday">
                         <td class="day-cell">Thursday</td>
-                        <td class="subject-cell">History</td>
-                        <td class="subject-cell">History</td>
+                        <td class="subject-cell">UA</td>
+                        <td class="subject-cell">AV</td>
                         <td class="break-cell">🍞 Break Fast</td>
-                        <td class="subject-cell">Physical Education</td>
-                        <td class="subject-cell">Geography</td>
+                        <td class="subject-cell"> UW</td>
+                        <td class="subject-cell">UA</td>
                         <td class="break-cell">🔔 Inter Bell</td>
-                        <td class="subject-cell">Geography</td>
-                        <td class="subject-cell">Mathematics</td>
+                        <td class="subject-cell">KVK</td>
+                        <td class="subject-cell">MR</td>
                         <td class="break-cell">🍽️ Lunch Break</td>
-                        <td class="subject-cell">English</td>
-                        <td class="subject-cell">Art & Craft</td>
+                        <td class="subject-cell">MR</td>
+                        <td class="subject-cell">DIRASATH</td>
                     </tr>
                     <tr data-day="Friday">
                         <td class="day-cell">Friday</td>
