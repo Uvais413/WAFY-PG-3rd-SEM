@@ -32,5 +32,27 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+// Disable right-click context menu
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+document.addEventListener('keydown', function(e) {
+  // F12
+  if (e.key === 'F12') {
+    e.preventDefault();
+  }
+  // Ctrl+Shift+I/J/C
+  if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) {
+    e.preventDefault();
+  }
+  // Ctrl+U
+  if (e.ctrlKey && e.key === 'u') {
+    e.preventDefault();
+  }
+});
+</script>
 </body>
 </html>
