@@ -8,7 +8,7 @@ const students = [
   },
   {
     username: "Uvais",
-    password: "Uv786",
+    password: "786",
     name: "UVAIS A.P",
     photo: "uv2.jpg",
   },
